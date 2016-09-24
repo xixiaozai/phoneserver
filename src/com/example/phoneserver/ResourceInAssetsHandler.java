@@ -38,7 +38,7 @@ public class ResourceInAssetsHandler implements IResourceUriHandler {
             e.printStackTrace();
         }*/
         int startIndex = acceptPrefis.length();
-        String assetsPath = uri.substring(startIndex);
+        String assetsPath = uri.substring(startIndex+1);
         InputStream fis = context.getAssets().open(assetsPath);
         byte[] raw = StreamToolKit.readRawFromStream(fis);
         fis.close();

@@ -96,7 +96,7 @@ public class SimpleHttpServer {
                 if (headerLiner.equals("\r\n")) {
                     break;
                 }
-                String[] pair = headerLiner.split(":");
+                String[] pair = headerLiner.split(": ");
                 if (pair.length > 1) {
                     httpContext.addResuestHeader(pair[0], pair[1]);
 
